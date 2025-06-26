@@ -2,11 +2,13 @@
  * DOM SELECTORS
  */
 
- const startButton = document.querySelector(".js-start-button");
+const startButton = document.querySelector("#start");
+const hole = document.querySelectorAll(".hole");
+const mole = document.querySelectorAll(".mole");
  // TODO: Add the missing query selectors:
- const statusSpan; // Use querySelector() to get the status element
- const heading; // Use querySelector() to get the heading element
- const padContainer; // Use querySelector() to get the heading element
+ // Use querySelector() to get the status element
+ const heading = document.querySelector(".heading"); // Use querySelector() to get the heading element
+ const padContainer = document.querySelector("#padContainer") // Use querySelector() to get the heading element
 
 /**
  * VARIABLES
