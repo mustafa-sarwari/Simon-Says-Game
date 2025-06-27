@@ -2,13 +2,11 @@
  * DOM SELECTORS
  */
 
-const startButton = document.querySelector("#start");
-const hole = document.querySelectorAll(".hole");
-const mole = document.querySelectorAll(".mole");
+ const startButton = document.querySelector(".js-start-button");
  // TODO: Add the missing query selectors:
- // Use querySelector() to get the status element
- const heading = document.querySelector(".heading"); // Use querySelector() to get the heading element
- const padContainer = document.querySelector("#padContainer") // Use querySelector() to get the heading element
+ const statusSpan = document.querySelector(".js-status"); // Use querySelector() to get the status element
+ const heading = document.querySelector(".js-heading"); // Use querySelector() to get the heading element
+ const padContainer = document.querySelector(".js-pad-container"); // Use querySelector() to get the heading element
 
 /**
  * VARIABLES
@@ -40,6 +38,21 @@ let roundCount = 0; // track the number of rounds that have been played so far
     sound: new Audio("../assets/simon-says-sound-1.mp3"),
   },
   // TODO: Add the objects for the green, blue, and yellow pads. Use object for the red pad above as an example.
+  {
+    color:"blue",
+    selector: document.querySelector(".js-pad-blue"),
+    sound: new Audio("../assets/simon-says-sound-2.mp3")
+  },
+  {
+    color: "green",
+    selector: document.querySelector(".js-pad-green"),
+    sound: new Audio("../assets/simon-says-sound-3.mp3")
+  },
+  {
+    color: "yellow",
+    selector: document.querySelector(".js-pad-yellow"),
+    sound: new Audio("../assets/simon-says-sound-4.mp3")
+  }
 ];
 
 /**
@@ -48,7 +61,7 @@ let roundCount = 0; // track the number of rounds that have been played so far
 
 padContainer.addEventListener("click", padHandler);
 // TODO: Add an event listener `startButtonHandler()` to startButton.
-
+startButton.addEventListener("click", startButtonHandler)
 /**
  * EVENT HANDLERS
  */
@@ -69,7 +82,10 @@ padContainer.addEventListener("click", padHandler);
  */
 function startButtonHandler() {
   // TODO: Write your code here.
-
+    setLevel();
+    playComputerTurn();
+    startButton.classList.add("hidden");
+    statusSpan.classList.remove("hidden");
   return { startButton, statusSpan };
 }
 
@@ -125,7 +141,14 @@ function padHandler(event) {
  */
 function setLevel(level = 1) {
   // TODO: Write your code here.
+  if(level === 1 || level === 2 || level === 3 || level === 4){
+      if(level === 1)   return 8;
+      if(level === 2)   return 14;
+      if( level === 3)  return 20;
+      if( level === 4)  return 31;
+ } else  return "Error: Please enter level 1, 2, 3, or 4";
 }
+
 
 /**
  * Returns a randomly selected item from a given array.
@@ -143,9 +166,9 @@ function setLevel(level = 1) {
  * getRandomItem([1, 2, 3, 4]) //> returns 1
  */
 function getRandomItem(collection) {
-  // if (collection.length === 0) return null;
-  // const randomIndex = Math.floor(Math.random() * collection.length);
-  // return collection[randomIndex];
+  if (collection.length === 0) return null;
+  const randomIndex = Math.floor(Math.random() * collection.length);
+  return collection[randomIndex];
 }
 
 /**
