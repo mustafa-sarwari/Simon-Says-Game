@@ -35,23 +35,23 @@ let roundCount = 0; // track the number of rounds that have been played so far
   {
     color: "red",
     selector: document.querySelector(".js-pad-red"),
-    sound: new Audio("../assets/simon-says-sound-1.mp3"),
+    sound: new Audio("js-dev-final-capstone-starter-simon-says/assets/simon-says-sound-1.mp3"),
   },
   // TODO: Add the objects for the green, blue, and yellow pads. Use object for the red pad above as an example.
   {
     color:"blue",
     selector: document.querySelector(".js-pad-blue"),
-    sound: new Audio("../assets/simon-says-sound-2.mp3")
+    sound: new Audio("js-dev-final-capstone-starter-simon-says/assets/simon-says-sound-2.mp3")
   },
   {
     color: "green",
     selector: document.querySelector(".js-pad-green"),
-    sound: new Audio("../assets/simon-says-sound-3.mp3")
+    sound: new Audio("js-dev-final-capstone-starter-simon-says/assets/simon-says-sound-3.mp3")
   },
   {
     color: "yellow",
     selector: document.querySelector(".js-pad-yellow"),
-    sound: new Audio("../assets/simon-says-sound-4.mp3")
+    sound: new Audio("js-dev-final-capstone-starter-simon-says/assets/simon-says-sound-4.mp3")
   }
 ];
 
@@ -176,7 +176,8 @@ function getRandomItem(collection) {
  */
 function setText(element, text) {
   // TODO: Write your code here.
-  return element;
+  element.textContent = text;
+  return element
 }
 
 /**
@@ -194,6 +195,18 @@ function setText(element, text) {
 
 function activatePad(color) {
   // TODO: Write your code here.
+  const pad = pads.find((pad1) => pad1.color === color)
+  
+  if(pad) {
+  
+  pad.selector.classList.add("activated");
+
+  setTimeout(() => {
+    pad.selector.classList.remove("activated");
+  }, 500)
+} else {
+return pad.sound.play();
+}
 }
 
 /**
@@ -239,10 +252,21 @@ function activatePads(sequence) {
  */
  function playComputerTurn() {
   // TODO: Write your code here.
+  padContainer.classList.add("unclickable")
+  heading.textContent = `Round ${roundCount} of ${maxRoundCount}`;
+  statusSpan.textContent = "The computer's turn...";
+  const randomColor = getRandomItem(pads);
+  computerSequence.push(randomColor.color);
+  activatePads(computerSequence);
 
-  setTimeout(() => playHumanTurn(roundCount), roundCount * 600 + 1000); // 5
+
+  setTimeout(() => {
+    roundCount++;
+    playHumanTurn(roundCount);
+    statusSpan.textContent = "The player's turn...";
+   }, roundCount * 600 + 1000); // 5
+
 }
-
 /**
  * Allows the player to play their turn.
  *
@@ -250,7 +274,7 @@ function activatePads(sequence) {
  *
  * 2. Display a status message showing the player how many presses are left in the round
  */
-function playHumanTurn() {
+function playHumanTurn(roundCount) {
   // TODO: Write your code here.
 }
 
@@ -324,6 +348,7 @@ function resetGame(text) {
  * Used for testing purposes.
  *
  */
+
 window.statusSpan = statusSpan;
 window.heading = heading;
 window.padContainer = padContainer;

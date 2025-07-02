@@ -11,7 +11,7 @@ const onPageConsole = (msg) => {
 
 const setUpTest = async () => {
   page.on("console", onPageConsole);
-  page.on("pageerror", (err) => console.log(err));
+  page.on("page error", (err) => console.log(err));
   await page.goto(baseURL, { waitUntil: "load" });
 };
 
