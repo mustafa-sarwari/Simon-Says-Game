@@ -109,9 +109,12 @@ function startButtonHandler() {
 function padHandler(event) {
   const { color } = event.target.dataset;
   if (!color) return;
+  const pad = pads.find(pod);
+  pad.sound.play();
+  checkPress(color);
+  return color;
 
   // TODO: Write your code here.
-  return color;
 }
 
 /**
@@ -274,8 +277,11 @@ function activatePads(sequence) {
  *
  * 2. Display a status message showing the player how many presses are left in the round
  */
-function playHumanTurn(roundCount) {
+function playHumanTurn() {
   // TODO: Write your code here.
+  padContainer.classList.remove("unclickable");
+  const remainingPresses = computerSequence.length - playerSequence.length;
+  statusSpan.textContent = `player remaining ${remainingPresses}`;
 }
 
 /**
@@ -302,9 +308,15 @@ function playHumanTurn(roundCount) {
  */
 function checkPress(color) {
   // TODO: Write your code here.
+  playerSequence.push(color);
+  const index = playerSequence.length -1;
+  const remainingPresses = computerSequence.length - playerSequence.length;
+  if(remainingPresses === 0) checkRound();
+  else resetGame;
+
 }
 
-/**
+ /**
  * Checks each round to see if the player has completed all the rounds of the game * or advance to the next round if the game has not finished.
  *
  * 1. If the length of the `playerSequence` array matches `maxRoundCount`, it means that
@@ -321,6 +333,13 @@ function checkPress(color) {
 
 function checkRound() {
   // TODO: Write your code here.
+  if(playerSequence.length == maxRoundCount) resetGame("Successfully you finished the game.");
+  else{
+    roundCount++;
+    playerSequence = [];
+    statusSpan = "Nice! Keep going!";
+    setTimeout(playComputerTurn(), 10000)
+  }
 }
 
 /**
