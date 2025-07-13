@@ -1,10 +1,10 @@
 /**
  * DOM SELECTORS
  */
-import sound1 from "url:../assets/simon-says-sound-1.mp3";
-import sound2 from "url:../assets/simon-says-sound-2.mp3";
-import sound3 from "url:../assets/simon-says-sound-3.mp3";
-import sound4 from "url:../assets/simon-says-sound-4.mp3";
+import sound1 from "../assets/simon-says-sound-1.mp3";
+import sound2 from "../assets/simon-says-sound-2.mp3";
+import sound3 from "../assets/simon-says-sound-3.mp3";
+import sound4 from "../assets/simon-says-sound-4.mp3";
 
  const startButton = document.querySelector(".js-start-button");
  // TODO: Add the missing query selectors:
@@ -45,12 +45,12 @@ let roundCount = 0; // track the number of rounds that have been played so far
   {
     color:"blue",
     selector: document.querySelector(".js-pad-blue"),
-    sound: new Audio(sound2)
+    sound: new Audio(sound3)
   },
   {
     color: "green",
     selector: document.querySelector(".js-pad-green"),
-    sound: new Audio(sound3)
+    sound: new Audio(sound2)
   },
   {
     color: "yellow",
