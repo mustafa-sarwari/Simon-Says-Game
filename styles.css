@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Microbe&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
+
 
 html {
   background: url('./assets/background.png') no-repeat center center fixed;
@@ -11,8 +12,8 @@ html {
 }
 
 body {
-  color: #00ffee;
-  font-family: 'Rubik Microbe', sans-serif;
+  color: #c4c1be;
+  font-family: "Bitcount Grid Single", system-ui;
   display: flex;
   justify-content: center;
   height: 100vh;
@@ -20,13 +21,14 @@ body {
 }
 
 main {
-  background-color: #495b5b	;
+  background-color: #4025045e;
   padding: 40px;
+  border-radius: 10%;
 }
 
 h1 {
   text-align: center;
-  font-size: 40px;
+  font-size: 60px;
 }
 
 .game-controls {
@@ -34,30 +36,35 @@ h1 {
 }
 
 .start-button {
+  font-family: "Bitcount Grid Single", system-ui;
+  font-weight: bolder;
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: #00ffee;
+  color: #c4c1be;
   text-align: center;
-  font-size: 14px;
+  font-size: 24px;
   font-weight: 600;
   text-transform: uppercase;
   background-color: transparent;
-  border: 2px solid #00ffee;
+  border: 2px solid #aca9a7;
   cursor: pointer;
+  background-color: #402504c3;
+  border-radius: 7%;
 }
 
 .start-button:hover {
-  color: #00ffee;
-  font-size: 18px;
+  color: #c4c1be;
+  font-size: 34px;
   border: 3px groove;
-  border-color: #63fff5;
+  border-color: #c4c1be;
   transform: rotate(5deg);
 }
 
 .status {
-  color: #00ffee;
-  font-size: 22px;
+  color: #c4c1be;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 .pad-container {
@@ -69,70 +76,70 @@ h1 {
 }
 
 .pad-red {
-  border-top-left-radius: 200px;
+  border-top-left-radius: 10%;
   background-color: #ff4d4d;
 }
 
 .pad-red:hover,
 .pad-red:focus {
-  background-color: #9ba384;
+  background-color: #c4c1be;
   transform: rotate(-5deg);
 }
 
 .pad-red:active,
 .pad-red.activated {
-  background-color: #ffffff;
+  background-color: #402504d8;
   transform: translateY(10px);
 }
 
 .pad-green {
-  border-top-right-radius: 200px;
+  border-top-right-radius: 10%;
   background-color: #33ff77;
 }
 
 .pad-green:hover,
 .pad-green:focus {
-  background-color: #ccd3b6;
+  background-color: #c4c1be;
   transform: rotate(5deg);
 }
 
 .pad-green:active,
 .pad-green.activated {
-  background-color: #ffffff;
+  background-color: #402504d8;
   transform: translateY(10px);
 }
 
 .pad-yellow {
-  border-bottom-right-radius: 200px;
+  border-bottom-right-radius: 10%;
   background-color: #ffff66;
 }
 
 .pad-yellow:hover,
 .pad-yellow:focus {
-  background-color: #828b6a;
+  background-color: #c4c1be;
   transform: rotate(5deg);
 }
 
 .pad-yellow:active,
 .pad-yellow.activated {
-  background-color: #ffffff;
+  background-color: #402504d8;
   transform: translateY(10px);
 }
 
 .pad-blue {
-  border-bottom-left-radius: 200px;
+  border-bottom-left-radius: 10%;
   background-color: #3399ff;
 }
 
 .pad-blue:hover,
 .pad-blue:focus {
-  background-color: #21231b;
+  background-color: #c4c1be;
   transform: rotate(5deg);
 }
 
 .pad-blue:active,
 .pad-blue.activated {
-  background-color: #ffffff;
+  background-color: #402504d8;
   transform: translateY(10px);
 }
 
