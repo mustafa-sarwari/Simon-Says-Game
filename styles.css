@@ -11,7 +11,7 @@ html {
 }
 
 body {
-  color: yellow;
+  color: #00ffee;
   font-family: 'Rubik Microbe', sans-serif;
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ body {
 }
 
 main {
-  background-color: #21231b;
+  background-color: #495b5b	;
   padding: 40px;
 }
 
@@ -37,24 +37,26 @@ h1 {
   display: inline-block;
   height: 38px;
   padding: 0 30px;
-  color: yellow;
+  color: #00ffee;
   text-align: center;
   font-size: 14px;
   font-weight: 600;
   text-transform: uppercase;
   background-color: transparent;
-  border: 1px solid yellow;
+  border: 2px solid #00ffee;
   cursor: pointer;
 }
 
 .start-button:hover {
-  color: #414635;
+  color: #00ffee;
   font-size: 18px;
-  border-color: greenyellow;
+  border: 3px groove;
+  border-color: #63fff5;
   transform: rotate(5deg);
 }
 
 .status {
+  color: #00ffee;
   font-size: 22px;
 }
 
@@ -68,7 +70,7 @@ h1 {
 
 .pad-red {
   border-top-left-radius: 200px;
-  background-color: #7593af;
+  background-color: #ff4d4d;
 }
 
 .pad-red:hover,
@@ -79,47 +81,47 @@ h1 {
 
 .pad-red:active,
 .pad-red.activated {
-  background-color: #a3b7ca;
+  background-color: #ffffff;
   transform: translateY(10px);
 }
 
 .pad-green {
   border-top-right-radius: 200px;
-  background-color: #b3bb9d;
+  background-color: #33ff77;
 }
 
 .pad-green:hover,
 .pad-green:focus {
-  background-color: ##ccd3b6;
+  background-color: #ccd3b6;
   transform: rotate(5deg);
 }
 
 .pad-green:active,
 .pad-green.activated {
-  background-color: #e4eacf;
+  background-color: #ffffff;
   transform: translateY(10px);
 }
 
 .pad-yellow {
   border-bottom-right-radius: 200px;
-  background-color: #414635;
+  background-color: #ffff66;
 }
 
 .pad-yellow:hover,
 .pad-yellow:focus {
-  background-color: ##828b6a;
+  background-color: #828b6a;
   transform: rotate(5deg);
 }
 
 .pad-yellow:active,
 .pad-yellow.activated {
-  background-color: #e4eacf;
+  background-color: #ffffff;
   transform: translateY(10px);
 }
 
 .pad-blue {
   border-bottom-left-radius: 200px;
-  background-color: #e4eacf;
+  background-color: #3399ff;
 }
 
 .pad-blue:hover,
@@ -130,7 +132,7 @@ h1 {
 
 .pad-blue:active,
 .pad-blue.activated {
-  background-color: #9ba384;
+  background-color: #ffffff;
   transform: translateY(10px);
 }
 
