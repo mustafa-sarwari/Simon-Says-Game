@@ -68,18 +68,18 @@ h1 {
 
 .pad-red {
   border-top-left-radius: 200px;
-  background-color: #828b6a;
+  background-color: #7593af;
 }
 
 .pad-red:hover,
 .pad-red:focus {
-  background-color: ##9ba384;
+  background-color: #9ba384;
   transform: rotate(-5deg);
 }
 
 .pad-red:active,
 .pad-red.activated {
-  background-color: #ff5c36;
+  background-color: #a3b7ca;
   transform: translateY(10px);
 }
 
