@@ -48,7 +48,7 @@ h1 {
 }
 
 .start-button:hover {
-  color: greenyellow;
+  color: #414635;
   font-size: 18px;
   border-color: greenyellow;
   transform: rotate(5deg);
@@ -68,12 +68,12 @@ h1 {
 
 .pad-red {
   border-top-left-radius: 200px;
-  background-color: red;
+  background-color: #828b6a;
 }
 
 .pad-red:hover,
 .pad-red:focus {
-  background-color: #ff451a;
+  background-color: ##9ba384;
   transform: rotate(-5deg);
 }
 
@@ -85,52 +85,52 @@ h1 {
 
 .pad-green {
   border-top-right-radius: 200px;
-  background-color: green;
+  background-color: #b3bb9d;
 }
 
 .pad-green:hover,
 .pad-green:focus {
-  background-color: #8cc218;
+  background-color: ##ccd3b6;
   transform: rotate(5deg);
 }
 
 .pad-green:active,
 .pad-green.activated {
-  background-color: #a0ea00;
+  background-color: #e4eacf;
   transform: translateY(10px);
 }
 
 .pad-yellow {
   border-bottom-right-radius: 200px;
-  background-color: yellow;
+  background-color: #414635;
 }
 
 .pad-yellow:hover,
 .pad-yellow:focus {
-  background-color: #ffb900;
+  background-color: ##828b6a;
   transform: rotate(5deg);
 }
 
 .pad-yellow:active,
 .pad-yellow.activated {
-  background-color: #ffca3d;
+  background-color: #e4eacf;
   transform: translateY(10px);
 }
 
 .pad-blue {
   border-bottom-left-radius: 200px;
-  background-color: blue;
+  background-color: #e4eacf;
 }
 
 .pad-blue:hover,
 .pad-blue:focus {
-  background-color: #139ddd;
+  background-color: #21231b;
   transform: rotate(5deg);
 }
 
 .pad-blue:active,
 .pad-blue.activated {
-  background-color: #2bbcff;
+  background-color: #9ba384;
   transform: translateY(10px);
 }
 
