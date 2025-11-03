@@ -1,7 +1,26 @@
 {
-  "name": "js-dev-b2b-final-capstone-simon-says",
+  "name": "simon-says-game",
   "version": "1.0.0",
-  "description": "js-dev-b2b-final-capstone qualified challenge",
+  "description": "A classic memory game built with HTML, CSS, and JavaScript. Test your memory by repeating increasingly complex sequences of colors and sounds.",
+  "author": "Mustafa Sarwari <mustafa.sarwari@email.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mustafa-sarwari/Simon-Says-Game.git"
+  },
+  "bugs": {
+    "url": "https://github.com/mustafa-sarwari/Simon-Says-Game/issues"
+  },
+  "homepage": "https://mustafa-sarwari.github.io/Simon-Says-Game/",
+  "keywords": [
+    "game",
+    "memory-game",
+    "simon-says",
+    "javascript",
+    "html5",
+    "css3",
+    "web-game"
+  ],
   "dependencies": {
     "parcel": "^2.15.4"
   },
