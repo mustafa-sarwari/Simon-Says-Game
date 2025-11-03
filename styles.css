@@ -1,6 +1,11 @@
+/* ===================================
+   IMPORTS
+   =================================== */
 @import url('https://fonts.googleapis.com/css2?family=Bitcount+Grid+Single:wght@100..900&display=swap');
 
-
+/* ===================================
+   BASE STYLES
+   =================================== */
 html {
   background: url('./assets/background.png') no-repeat center center fixed;
   box-sizing: border-box;
@@ -18,8 +23,12 @@ body {
   justify-content: center;
   height: 100vh;
   align-items: center;
+  margin: 0;
 }
 
+/* ===================================
+   LAYOUT
+   =================================== */
 main {
   background-color: #4025045e;
   padding: 40px;
@@ -29,8 +38,12 @@ main {
 h1 {
   text-align: center;
   font-size: 60px;
+  margin-top: 0;
 }
 
+/* ===================================
+   GAME CONTROLS
+   =================================== */
 .game-controls {
   text-align: center;
 }
@@ -67,6 +80,9 @@ h1 {
   font-weight: bolder;
 }
 
+/* ===================================
+   GAME PAD CONTAINER
+   =================================== */
 .pad-container {
   display: grid;
   grid-template-rows: 200px 200px;
@@ -75,6 +91,11 @@ h1 {
   margin: 20px;
 }
 
+/* ===================================
+   INDIVIDUAL PADS
+   =================================== */
+
+/* Red Pad */
 .pad-red {
   border-top-left-radius: 10%;
   background-color: #ff4d4d;
@@ -92,6 +113,7 @@ h1 {
   transform: translateY(10px);
 }
 
+/* Green Pad */
 .pad-green {
   border-top-right-radius: 10%;
   background-color: #33ff77;
@@ -109,6 +131,7 @@ h1 {
   transform: translateY(10px);
 }
 
+/* Yellow Pad */
 .pad-yellow {
   border-bottom-right-radius: 10%;
   background-color: #ffff66;
@@ -126,6 +149,7 @@ h1 {
   transform: translateY(10px);
 }
 
+/* Blue Pad */
 .pad-blue {
   border-bottom-left-radius: 10%;
   background-color: #3399ff;
@@ -143,6 +167,9 @@ h1 {
   transform: translateY(10px);
 }
 
+/* ===================================
+   UTILITY CLASSES
+   =================================== */
 .hidden {
   display: none;
 }
