@@ -85,7 +85,6 @@ function startButtonHandler() {
 function padHandler(event) {
   const { color } = event.target.dataset;
   if (!color) return;
-  
   const pad = pads.find(pad => pad.color === color);
   pad.sound.play();
   checkPress(color);
@@ -224,12 +223,10 @@ function playHumanTurn() {
 function checkPress(color) {
   playerSequence.push(color);
   const index = playerSequence.length - 1;
-  
   if (playerSequence[index] !== computerSequence[index]) {
     resetGame("Wrong pad! Game over. Try again.");
     return;
   }
-  
   const remainingPresses = computerSequence.length - playerSequence.length;
   if (remainingPresses === 0) {
     checkRound();
@@ -262,7 +259,6 @@ function resetGame(text) {
   computerSequence = [];
   playerSequence = [];
   roundCount = 0;
-  
   alert(text);
   setText(heading, "Simon Says");
   startButton.classList.remove("hidden");
